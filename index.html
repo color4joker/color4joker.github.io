@@ -223,6 +223,114 @@
 
 
   
+    <article id="post-BuildHexoBlog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/12/02/BuildHexoBlog/">MacOS Build Hexo Blog</a>
+    </h1>
+  
+
+        
+        <a href="/2017/12/02/BuildHexoBlog/" class="archive-article-date">
+  	<time datetime="2017-12-02T02:43:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-12-02</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p><font color="#DC143C" size="4">你可以附上本blog的链接，但是，禁止转载！</font></p>
+<h4 id="第一篇正文，还是用中文写吧。与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因："><a href="#第一篇正文，还是用中文写吧。与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：" class="headerlink" title="第一篇正文，还是用中文写吧。与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因："></a>第一篇正文，还是用中文写吧。与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：</h4><blockquote>
+<ol>
+<li>我不喜欢广告，希望blog只有文章、评论</li>
+<li>blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果</li>
+<li>能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格</li>
+<li>平台要足够稳定，因为国内很多平台都不稳定，随时可能倒闭，然后我就需要转移所有内容，这是我最为担心的。比如之前就是各种免费云，那么大的容量，1T、2T甚至无限的，最后统统关闭了，对这种具有中国特色的跟风非常的反感</li>
+<li>尝试过其他的平台都是一团糟，最后还是寻找国外的平台了</li>
+</ol>
+</blockquote>
+<h4 id="整篇文章会按照以下步骤展开："><a href="#整篇文章会按照以下步骤展开：" class="headerlink" title="整篇文章会按照以下步骤展开："></a>整篇文章会按照以下步骤展开：</h4><ul>
+<li>我在搭建blog时的系统环境介绍</li>
+<li>申请github账号并建立一个repository</li>
+<li>生成ssh key与github通信</li>
+<li>安装git</li>
+<li>安装node.js</li>
+<li>安装hexo并进行简单设置(包括hexo与github的连接)</li>
+<li>发布第一篇文章</li>
+<li>如何使用一个主题theme</li>
+<li>总结搭建过程中需要用到的知识(Terminal和Vim和Markdown)</li>
+</ul>
+        
+          <a class="article-more-a" href="/2017/12/02/BuildHexoBlog/#more">more >></a>
+        
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">MacOS</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Hexo</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Github</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">Vim</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/12/02/BuildHexoBlog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
   
 
 
@@ -314,6 +422,22 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
             <input type="checkbox" q-on="click:toggleTag(e)" q-attr="checked:showTags">
           </label>
           <ul class="article-tag-list" q-show="showTags">
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">MacOS</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">Github</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color4">Vim</a>
+              </li>
             
             <div class="clearfix"></div>
           </ul>
