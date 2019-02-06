@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="MacOS,Hexo,Github,Vim," />
+  <meta name="keywords" content="MacOS,Hexo," />
 
 
 
@@ -80,17 +80,22 @@
 
 
 <meta name="description" content="未经本人同意，内容禁止转载！ 与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：  我不喜欢广告，希望blog只有文章、评论 blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果 能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格">
-<meta name="keywords" content="MacOS,Hexo,Github,Vim">
+<meta name="keywords" content="MacOS,Hexo">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MacOS Build Hexo Blog">
+<meta property="og:title" content="在MacOS操作系统下搭建Hexo博客">
 <meta property="og:url" content="http://yoursite.com/2019/02/07/BuildHexoBlog/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Color4Joker">
 <meta property="og:description" content="未经本人同意，内容禁止转载！ 与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：  我不喜欢广告，希望blog只有文章、评论 blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果 能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-06T17:15:13.900Z">
+<meta property="og:image" content="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207001.png?Expires=1549485414&OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&Signature=uTDzYgnk9hnl0VkS1hZYfRCPOh0%3D">
+<meta property="og:image" content="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207002.png?Expires=1549485584&OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&Signature=wZWDAbq33DKd7emWG7LErjc3uqY%3D">
+<meta property="og:image" content="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207003.png?Expires=1549485660&OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&Signature=%2BNLDm9ArKKFNYXxgFeWlkKvA7fU%3D">
+<meta property="og:image" content="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207004.png?Expires=1549485821&OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&Signature=g9DxWXSwXNlxJofdp72wNaGwgW8%3D">
+<meta property="og:updated_time" content="2019-02-06T19:44:17.875Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MacOS Build Hexo Blog">
+<meta name="twitter:title" content="在MacOS操作系统下搭建Hexo博客">
 <meta name="twitter:description" content="未经本人同意，内容禁止转载！ 与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：  我不喜欢广告，希望blog只有文章、评论 blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果 能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格">
+<meta name="twitter:image" content="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207001.png?Expires=1549485414&OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&Signature=uTDzYgnk9hnl0VkS1hZYfRCPOh0%3D">
 
 
 
@@ -126,7 +131,7 @@
 
 
 
-  <title>MacOS Build Hexo Blog | Hexo</title>
+  <title>在MacOS操作系统下搭建Hexo博客 | Color4Joker</title>
   
 
 
@@ -156,7 +161,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Hexo</span>
+        <span class="site-title">Color4Joker</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -202,7 +207,7 @@
       
         
         <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
+          <a href="/tags/" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
             
@@ -256,13 +261,13 @@
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/02/07/BuildHexoBlog/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
+      <meta itemprop="name" content="Lee">
       <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="image" content="/images/avatar.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
+      <meta itemprop="name" content="Color4Joker">
     </span>
 
     
@@ -270,7 +275,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MacOS Build Hexo Blog</h1>
+          <h1 class="post-title" itemprop="name headline">在MacOS操作系统下搭建Hexo博客</h1>
         
 
         <div class="post-meta">
@@ -352,7 +357,8 @@
 </ol>
 <p>所以我的建议是你的版本跟我一致或者更高比较好，如果因为version的关系在搭建过程中就可能会遇到很多的意想不到的问题。我在搭建的时候几乎没有遇到什么问题，基本上就是一次性就搭建好了</p>
 <h2 id="2-申请github账号并建立一个repository"><a href="#2-申请github账号并建立一个repository" class="headerlink" title="2. 申请github账号并建立一个repository"></a>2. 申请github账号并建立一个repository</h2><p>申请一个github账号没有什么好说的，用邮箱注册一下就好了，在此教程生成的这个时间点，我没有用vpn也可以流畅的使用github，所以应该没有被万里长城屏蔽掉</p>
-<h4 id="建立一个repository"><a href="#建立一个repository" class="headerlink" title="建立一个repository"></a>建立一个repository</h4><p>占位，正在找方法解决稳定图床的问题</p>
+<h4 id="建立一个repository"><a href="#建立一个repository" class="headerlink" title="建立一个repository"></a>建立一个repository</h4><p>在github上创建一个repository，如图所示<br><img src="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207001.png?Expires=1549485414&amp;OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&amp;Signature=uTDzYgnk9hnl0VkS1hZYfRCPOh0%3D" alt=""></p>
+<p>注意repository的名字，必须以github的username.github.io这种格式才行<br><img src="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207002.png?Expires=1549485584&amp;OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&amp;Signature=wZWDAbq33DKd7emWG7LErjc3uqY%3D" alt=""></p>
 <h2 id="3-生成ssh-key与github通信"><a href="#3-生成ssh-key与github通信" class="headerlink" title="3. 生成ssh key与github通信"></a>3. 生成ssh key与github通信</h2><h4 id="检查ssh-key是否存在"><a href="#检查ssh-key是否存在" class="headerlink" title="检查ssh key是否存在"></a>检查ssh key是否存在</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
 <p>如果不存在会显示No such file or directory，如果存在会显示 id_rsa 和 id_rsa.pub</p>
 <h4 id="创建新ssh-key"><a href="#创建新ssh-key" class="headerlink" title="创建新ssh key"></a>创建新ssh key</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"example@example.com"</span></span><br></pre></td></tr></table></figure>
@@ -364,7 +370,8 @@
 <p>这样一个ssh key就生成了</p>
 <h4 id="添加ssh-key到github"><a href="#添加ssh-key到github" class="headerlink" title="添加ssh key到github"></a>添加ssh key到github</h4><p>打开id_rsa.pub，其终端命令为</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
-<p>复制以ssh-rsa开头到以邮箱结尾的所有内容<br>登录github，选择settings，选择SSH and GPG keys，选择new ssh key，将刚才复制的内容全部粘贴进去就完成了</p>
+<p>复制以ssh-rsa开头到以邮箱结尾的所有内容<br>登录github，选择settings，选择SSH and GPG keys，选择new ssh key，将刚才复制的内容全部粘贴进去就完成了<br><img src="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207003.png?Expires=1549485660&amp;OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&amp;Signature=%2BNLDm9ArKKFNYXxgFeWlkKvA7fU%3D" alt=""></p>
+<p><img src="http://color4joker-images.oss-cn-shenzhen.aliyuncs.com/hexo/20190207/20190207004.png?Expires=1549485821&amp;OSSAccessKeyId=TMP.AQGZwth21fSFq6_h6d6LwFMnKMy3a8ekav40Np2W7Bc8dkNYVIwwFyqaQ0-lADAtAhUAm_G3aQ-dNFJkRnZfi6lejmU3JpQCFEC5E29-HO1y9ZLa8n_DR1bPAyKH&amp;Signature=g9DxWXSwXNlxJofdp72wNaGwgW8%3D" alt=""></p>
 <h4 id="测试是否可以连接"><a href="#测试是否可以连接" class="headerlink" title="测试是否可以连接"></a>测试是否可以连接</h4><p>终端输入</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br></pre></td></tr></table></figure>
 <p>如果显示以下信息就成功了</p>
@@ -414,7 +421,7 @@
 <p>也能看到一篇新文章生成<br>此时新文章只在你本地电脑上，如果要发布到github你需要输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
 <p>所以基本上每次编辑好你的新文章md文件后都有这个发布的过程。</p>
-<h2 id="8-使用一个blog主题"><a href="#8-使用一个blog主题" class="headerlink" title="8. 使用一个blog主题"></a>8. 使用一个blog主题</h2><p>首先我们要明白的是默认的自带主题只有landscape一个，很显然你希望一个有自己风格的主题或者排版风格。由于我暂时不会js，并且我认为一个blog的灵魂是内容，所以，我们可以使用别人已经制作好的主题。在这里感谢网络上无数的技术达人无私的奉献。你可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官方网站</a>找到很多的主题。我使用的是一个yilia简洁风格的主题</p>
+<h2 id="8-使用一个blog主题"><a href="#8-使用一个blog主题" class="headerlink" title="8. 使用一个blog主题"></a>8. 使用一个blog主题</h2><p>首先我们要明白的是默认的自带主题只有landscape一个，很显然你希望一个有自己风格的主题或者排版风格。由于我暂时不会js，并且我认为一个blog的灵魂是内容，所以，我们可以使用别人已经制作好的主题。在这里感谢网络上无数的技术达人无私的奉献。你可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官方网站</a>找到很多的主题。我使用的是一个yilia简洁风格的主题（现在已经换成next主题）</p>
 <h4 id="如何使用yilia主题"><a href="#如何使用yilia主题" class="headerlink" title="如何使用yilia主题"></a>如何使用yilia主题</h4><p>首先cd到你的hexo文件夹，本文章里是localblog，然后输入：</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
 <p>完成后yilia主题就被下载放置到themes文件夹下面了，进入themes文件夹你就能看到一个新的文件夹yilia，说明就成功下载了</p>
@@ -446,10 +453,6 @@
           
             <a href="/tags/Hexo/" rel="tag"># Hexo</a>
           
-            <a href="/tags/Github/" rel="tag"># Github</a>
-          
-            <a href="/tags/Vim/" rel="tag"># Vim</a>
-          
         </div>
       
 
@@ -461,7 +464,7 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2018/06/10/hello-world/" rel="next" title="Hello World">
+              <a href="/2019/02/07/hello-world/" rel="next" title="Hello World">
                 <i class="fa fa-chevron-left"></i> Hello World
               </a>
             
@@ -535,8 +538,12 @@
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
-              <p class="site-author-name" itemprop="name">John Doe</p>
-              <p class="site-description motion-element" itemprop="description"></p>
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Lee" />
+            
+              <p class="site-author-name" itemprop="name">Lee</p>
+              <p class="site-description motion-element" itemprop="description">如果没有你,良辰美景更与何人说</p>
           </div>
 
           <nav class="site-state motion-element">
@@ -558,10 +565,10 @@
               
               
               <div class="site-state-item site-state-tags">
-                
-                  <span class="site-state-item-count">4</span>
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">2</span>
                   <span class="site-state-item-name">tags</span>
-                
+                </a>
               </div>
             
 
@@ -612,11 +619,11 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">John Doe</span>
+  <span class="author" itemprop="copyrightHolder">Lee</span>
 
   
 </div>
@@ -677,6 +684,8 @@
   
 
 
+  
+
 
 
 
@@ -715,6 +724,11 @@
   
   
     <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   
 
 
