@@ -86,7 +86,7 @@
 <meta property="og:site_name" content="Color4Joker">
 <meta property="og:description" content="这是一个简单的小站，希望通过这个地方来记录技术的一步步成长。如果内容也能给你的学习和生活带来一些启发，那将是我的荣幸 小站的名字color4joker，来自于一个偶然：打牌的时候我们在讨论扑克的各种花色和名称应该用英文怎么说，红心是heart，梅花是club，方片是diamond，黑桃是spade，加上jack，queen，king，大小王呢？朋友开玩笑说小王是灰色的，是joker，大王是彩色的，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-06T19:06:36.407Z">
+<meta property="og:updated_time" content="2019-02-07T08:01:36.122Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="About">
 <meta name="twitter:description" content="这是一个简单的小站，希望通过这个地方来记录技术的一步步成长。如果内容也能给你的学习和生活带来一些启发，那将是我的荣幸 小站的名字color4joker，来自于一个偶然：打牌的时候我们在讨论扑克的各种花色和名称应该用英文怎么说，红心是heart，梅花是club，方片是diamond，黑桃是spade，加上jack，queen，king，大小王呢？朋友开玩笑说小王是灰色的，是joker，大王是彩色的，">
@@ -210,6 +210,16 @@
         </li>
       
         
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
         <li class="menu-item menu-item-archives">
           <a href="/archives/" rel="section">
             
@@ -285,6 +295,9 @@
           
 
   
+    <div id="gitalk-container"></div>
+
+  
 
 
 
@@ -333,6 +346,15 @@
               </div>
             
 
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
             
 
             
@@ -553,6 +575,22 @@
 
 
 
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: '996320dc8d362a4f3d9d',
+          clientSecret: 'cae98e5c47d0136f630829e90db8a4dc9fee09f4',
+          repo: 'color4joker.github.io',
+          owner: 'color4joker',
+          admin: ['color4joker'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
 
 
   
