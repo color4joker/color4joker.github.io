@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="MacOS,Hexo," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="未经本人同意，内容禁止转载！ 与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：  我不喜欢广告，希望blog只有文章、评论 blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果 能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格">
+<meta name="keywords" content="MacOS,Hexo">
+<meta property="og:type" content="article">
+<meta property="og:title" content="在MacOS操作系统下搭建Hexo博客">
+<meta property="og:url" content="http://color4joker.github.io/2019/02/07/build_hexo_blog/index.html">
+<meta property="og:site_name" content="Color4Joker">
+<meta property="og:description" content="未经本人同意，内容禁止转载！ 与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：  我不喜欢广告，希望blog只有文章、评论 blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果 能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_001.png">
+<meta property="og:image" content="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_002.png">
+<meta property="og:image" content="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_003.png">
+<meta property="og:image" content="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_004.png">
+<meta property="og:updated_time" content="2021-11-30T15:42:10.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="在MacOS操作系统下搭建Hexo博客">
+<meta name="twitter:description" content="未经本人同意，内容禁止转载！ 与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：  我不喜欢广告，希望blog只有文章、评论 blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果 能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格">
+<meta name="twitter:image" content="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_001.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://color4joker.github.io/2019/02/07/build_hexo_blog/"/>
+
+
+
+
+
+  <title>在MacOS操作系统下搭建Hexo博客 | Color4Joker</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Color4Joker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://color4joker.github.io/2019/02/07/build_hexo_blog/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Color4Joker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">在MacOS操作系统下搭建Hexo博客</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-07T00:43:56+08:00">
+                2019-02-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/博客搭建/" itemprop="url" rel="index">
+                    <span itemprop="name">博客搭建</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p><font color="#DC143C" size="4">未经本人同意，内容禁止转载！</font></p>
+<h4 id="与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因："><a href="#与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：" class="headerlink" title="与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因："></a>与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：</h4><blockquote>
+<ol>
+<li>我不喜欢广告，希望blog只有文章、评论</li>
+<li>blog能支持繁杂的格式。比如各种代码能保持其在IDE一样的格式，可以打各种公式，以及你们现在看到的我在写这几个原因的这样的效果</li>
+<li>能按照自己的想法来安排blog的样式，个人喜欢简洁、实用的风格</li>
+<li>平台要足够稳定，因为国内很多平台都不稳定，随时可能倒闭，然后我就需要转移所有内容，这是我最为担心的。比如之前就是各种免费云，那么大的容量，1T、2T甚至无限的，最后统统关闭了，对这种具有中国特色的市场行为非常的反感</li>
+<li>尝试过其他的平台都是一团糟，最后还是寻找国外的平台了</li>
+</ol>
+</blockquote>
+<h4 id="整篇文章会按照以下步骤展开："><a href="#整篇文章会按照以下步骤展开：" class="headerlink" title="整篇文章会按照以下步骤展开："></a>整篇文章会按照以下步骤展开：</h4><ul>
+<li>我在搭建blog时的系统环境介绍</li>
+<li>申请github账号并建立一个repository</li>
+<li>生成ssh key与github通信</li>
+<li>安装git</li>
+<li>安装node.js</li>
+<li>安装hexo并进行简单设置(包括hexo与github的连接)</li>
+<li>发布第一篇文章</li>
+<li>如何使用一个主题theme</li>
+<li>总结搭建过程中需要用到的知识(Terminal和Vim和Markdown)</li>
+</ul>
+<a id="more"></a>
+<h2 id="1-设备与搭建环境"><a href="#1-设备与搭建环境" class="headerlink" title="1. 设备与搭建环境"></a>1. 设备与搭建环境</h2><p>我使用hexo来搭建平台，hexo由台湾的tommy351大神用node.js编写，膜拜。我的由hexo生成的blog代码托管于github，以下是我使用的设备和搭建环境的version：</p>
+<ol>
+<li>MacOS Sierra version 10.12.6，这个很重要，我用的macbook，所以很多操作都是在terminal中完成</li>
+<li>node.js version 8.9.1</li>
+<li>git version 2.13.6 (Apple Git-96) 下载Xcode会自带git</li>
+<li>hexo version 3.4.1 通过terminal下载</li>
+<li>Xcode version 9.1 App Store下载</li>
+</ol>
+<p>所以我的建议是你的版本跟我一致或者更高比较好，如果因为version的关系在搭建过程中就可能会遇到很多的意想不到的问题。我在搭建的时候几乎没有遇到什么问题，基本上就是一次性就搭建好了</p>
+<h2 id="2-申请github账号并建立一个repository"><a href="#2-申请github账号并建立一个repository" class="headerlink" title="2. 申请github账号并建立一个repository"></a>2. 申请github账号并建立一个repository</h2><p>申请一个github账号没有什么好说的，用邮箱注册一下就好了，在此教程生成的这个时间点，我没有用vpn也可以流畅的使用github，所以应该没有被万里长城屏蔽掉</p>
+<h4 id="建立一个repository"><a href="#建立一个repository" class="headerlink" title="建立一个repository"></a>建立一个repository</h4><p>在github上创建一个repository，如图所示</p>
+<p><img src="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_001.png" alt=""></p>
+<p>注意repository的名字，必须以github的username.github.io这种格式才行</p>
+<p><img src="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_002.png" alt=""></p>
+<h2 id="3-生成ssh-key与github通信"><a href="#3-生成ssh-key与github通信" class="headerlink" title="3. 生成ssh key与github通信"></a>3. 生成ssh key与github通信</h2><h4 id="检查ssh-key是否存在"><a href="#检查ssh-key是否存在" class="headerlink" title="检查ssh key是否存在"></a>检查ssh key是否存在</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ls -al ~/.ssh</span><br></pre></td></tr></table></figure>
+<p>如果不存在会显示No such file or directory，如果存在会显示 id_rsa 和 id_rsa.pub</p>
+<h4 id="创建新ssh-key"><a href="#创建新ssh-key" class="headerlink" title="创建新ssh key"></a>创建新ssh key</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-keygen -t rsa -C <span class="string">"example@example.com"</span></span><br></pre></td></tr></table></figure>
+<p>其中<a href="mailto:example@example.com" target="_blank" rel="noopener">example@example.com</a>为你在注册github时所用的邮箱<br>这时候会提示你保存路径，直接键盘回车<br>这时候会提示输入passphrase，建议直接键盘回车，否则以后连接github去push代码时每次都要输入<br>成功后会显示：</p>
+<blockquote>
+<p>Your identification has been saved in xxxxxxxxxxxxxxxx<br>Your public key has been saved in xxxxxxxxxxxxxxxx<br>The key fingerprint is: xxxxxxxxxxxxxxxxxxxxxxxx<br>The key’s randomart image is:（后面图形省略）</p>
+</blockquote>
+<h4 id="添加key到ssh"><a href="#添加key到ssh" class="headerlink" title="添加key到ssh"></a>添加key到ssh</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh-add ~/.ssh/id_rsa</span><br></pre></td></tr></table></figure>
+<p>这样一个ssh key就生成了</p>
+<h4 id="添加ssh-key到github"><a href="#添加ssh-key到github" class="headerlink" title="添加ssh key到github"></a>添加ssh key到github</h4><p>打开id_rsa.pub，其终端命令为</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim ~/.ssh/id_rsa.pub</span><br></pre></td></tr></table></figure>
+<p>复制以ssh-rsa开头到以邮箱结尾的所有内容<br>登录github，选择settings，选择SSH and GPG keys，选择new ssh key，将刚才复制的内容全部粘贴进去就完成了</p>
+<p><img src="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_003.png" alt=""></p>
+<p><img src="https://images.color4joker.com/2019%3A02%3A07%3Ahexo-build_004.png" alt=""></p>
+<h4 id="测试是否可以连接"><a href="#测试是否可以连接" class="headerlink" title="测试是否可以连接"></a>测试是否可以连接</h4><p>终端输入</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ ssh git@github.com</span><br></pre></td></tr></table></figure>
+<p>如果显示以下信息就成功了</p>
+<blockquote>
+<p>Hi xxxxx! You’ve successfully authenticated, but GitHub does not provide shell access. Connection to github.com closed.</p>
+</blockquote>
+<h2 id="4-安装git"><a href="#4-安装git" class="headerlink" title="4. 安装git"></a>4. 安装git</h2><p>我是直接安装的Xcode，Xcode自带了git，Xcode在App store中直接搜索即可下载，大约几个G。由于想到以后可能会使用Xcode编写IOS的程序，另外也为了减少配置的麻烦，因为不清楚单独安装git是否有设置的问题，所以感觉直接安装Xcode更加快捷方便。本教程是基于MacOS的系统，所以强烈建议此方式减少安装过程可能会出现的错误</p>
+<p>安装之后使用以下代码在terminal中查看git版本号：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git version</span><br></pre></td></tr></table></figure>
+<h2 id="5-安装node-js"><a href="#5-安装node-js" class="headerlink" title="5. 安装node.js"></a>5. 安装node.js</h2><p>Mac系统直接去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node</a>官方网站下载，安装包不停的点击下一步，就安装好了</p>
+<p>安装之后在terminal中查看版本号：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ node -v</span><br></pre></td></tr></table></figure>
+<p>检查npm版本号(npm是个包管理工具，会随同node.js的安装一同安装)：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm -v</span><br></pre></td></tr></table></figure>
+<h2 id="6-安装hexo并进行简单设置"><a href="#6-安装hexo并进行简单设置" class="headerlink" title="6. 安装hexo并进行简单设置"></a>6. 安装hexo并进行简单设置</h2><p>在terminal中进行hexo的安装：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo npm install -g hexo</span><br></pre></td></tr></table></figure>
+<p>新建一个文件夹，例如建立一个文件夹叫localblog，在terminal中cd到这个文件夹中，然后执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo init</span><br></pre></td></tr></table></figure>
+<p>然后执行</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install</span><br></pre></td></tr></table></figure>
+<p>就完成hexo的安装了<br>接下来我们可以看看原始的hexo效果，首先生成静态页面，依然cd到这个localblog中输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<p>然后启动hexo的本地server：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>这个时候在终端中会显示：</p>
+<blockquote>
+<p>INFO  Start processing<br>INFO  Hexo is running at <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a>. Press Ctrl+C to stop.  </p>
+</blockquote>
+<p>打开电脑上的浏览器，输入这个网址 <a href="http://localhost:4000/" target="_blank" rel="noopener">http://localhost:4000/</a> 就可以看到一个原始hexo博客页面了</p>
+<h4 id="将本地hexo与github-page联系起来"><a href="#将本地hexo与github-page联系起来" class="headerlink" title="将本地hexo与github page联系起来"></a>将本地hexo与github page联系起来</h4><p>进入你的localblog的文件夹，你会找到一个叫做_config.yml的文件，我们需要修改这个文件。</p>
+<p>首先cd进入这个文件夹，然后输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>此时_config.yml在terminal中打开，找到deployment，将你在github上建立的repository地址填写在里面，如下所示：</p>
+<blockquote>
+<p>deploy:<br>&nbsp;&nbsp;&nbsp;&nbsp;type: git<br>&nbsp;&nbsp;&nbsp;&nbsp;repo: 你的repository地址<br>&nbsp;&nbsp;&nbsp;&nbsp;branch: master</p>
+</blockquote>
+<p>修改好以后保存、退出<br>现在我们要将本地的hexo文件通过git的方式push到github的repository中<br>首先要安装一个小插件，这个是hexo要git到github上必须的！！！</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+<p>安装完成以后，就可以把本地hexo文件push到github上了，输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>完成后就可以通过 <a href="https://yourname.github.io/" target="_blank" rel="noopener">https://yourname.github.io/</a> 在浏览器里看到啦</p>
+<h2 id="7-发布一篇文章"><a href="#7-发布一篇文章" class="headerlink" title="7. 发布一篇文章"></a>7. 发布一篇文章</h2><p>首先我们要看一下hexo的文件夹，就是我们建立的localblog，进入这个文件夹，我们会看到一些重要的文件: _config.yml所有hexo的基本设置都在这里。themes文件夹保存了你以后会使用的主题，如果你点进去看就会发现有个landscape文件夹，这个主题即是你在步骤6中生成网页的主题。然后就是source文件夹，进入后你会看到_post文件夹，进入这个post文件夹，里面会有一个hello-world.md文件，这个就是你步骤6中那个自动生成的文章，以后所有的文章都会以markdown文件的形式保存在这里。  </p>
+<h4 id="发布一篇新文章"><a href="#发布一篇新文章" class="headerlink" title="发布一篇新文章"></a>发布一篇新文章</h4><p>首先terminal要cd到你的hexo文件夹，比如这里我们cd到localblog，然后输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"新文章的文件名"</span></span><br></pre></td></tr></table></figure>
+<p>成功后会显示你成功生成了一个md文件，你可以在_post文件夹中看到，你也可以启动本地hexo的server：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>也能看到一篇新文章生成<br>此时新文章只在你本地电脑上，如果要发布到github你需要输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo clean</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>所以基本上每次编辑好你的新文章md文件后都有这个发布的过程。</p>
+<h2 id="8-使用一个blog主题"><a href="#8-使用一个blog主题" class="headerlink" title="8. 使用一个blog主题"></a>8. 使用一个blog主题</h2><p>首先我们要明白的是默认的自带主题只有landscape一个，很显然你希望一个有自己风格的主题或者排版风格。由于我暂时不会js，并且我认为一个blog的灵魂是内容，所以，我们可以使用别人已经制作好的主题。在这里感谢网络上无数的技术达人无私的奉献。你可以在<a href="https://hexo.io/themes/" target="_blank" rel="noopener">hexo官方网站</a>找到很多的主题。我使用的是一个yilia简洁风格的主题（现在已经换成next主题）</p>
+<h4 id="如何使用yilia主题"><a href="#如何使用yilia主题" class="headerlink" title="如何使用yilia主题"></a>如何使用yilia主题</h4><p>首先cd到你的hexo文件夹，本文章里是localblog，然后输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
+<p>完成后yilia主题就被下载放置到themes文件夹下面了，进入themes文件夹你就能看到一个新的文件夹yilia，说明就成功下载了</p>
+<p>接下来我们要用这个theme来替换之前默认的主题，进入_config.yml文件：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ vim _config.yml</span><br></pre></td></tr></table></figure>
+<p>找到theme：landscape 改为theme：yilia<br>然后保存退出</p>
+<p>然后输入：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ hexo c</span><br><span class="line">$ hexo g</span><br><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<p>就可以在本地看到yilia主题的效果了，关于yilia主题应该如何设置，作者<a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="noopener">Litten</a>有详细的说明</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本来想总结一下的，发现这些技能很多，很杂，遇到问题自己baidu或者google更好吧<br>只在这里说一个，vim命令是进入一个编辑器，进入后只是浏览模式，如果要编辑首先要按i，之后会出现insert，这时候就可以编辑了，编辑好之后先按esc退出编辑模式，然后按shift+:就会出现一个冒号，输入w保存改动，输入q退出编辑  </p>
+<h4 id="终于写完了，由于是第一篇，所以花了较多的时间查各种出现的问题以及如何编辑markdown文件，另外还没有找到合适的图床，所以这篇文章没有图片，另外还有没有编辑完成的地方，等我先想想再说。（已经找到图床，用的阿里云的oss服务，本来想替换用自己的域名，但域名必须备案，额，这个就比较麻烦了，需要点时间）"><a href="#终于写完了，由于是第一篇，所以花了较多的时间查各种出现的问题以及如何编辑markdown文件，另外还没有找到合适的图床，所以这篇文章没有图片，另外还有没有编辑完成的地方，等我先想想再说。（已经找到图床，用的阿里云的oss服务，本来想替换用自己的域名，但域名必须备案，额，这个就比较麻烦了，需要点时间）" class="headerlink" title="终于写完了，由于是第一篇，所以花了较多的时间查各种出现的问题以及如何编辑markdown文件，另外还没有找到合适的图床，所以这篇文章没有图片，另外还有没有编辑完成的地方，等我先想想再说。（已经找到图床，用的阿里云的oss服务，本来想替换用自己的域名，但域名必须备案，额，这个就比较麻烦了，需要点时间）"></a>终于写完了，由于是第一篇，所以花了较多的时间查各种出现的问题以及如何编辑markdown文件，另外还没有找到合适的图床，所以这篇文章没有图片，另外还有没有编辑完成的地方，等我先想想再说。（已经找到图床，用的阿里云的oss服务，本来想替换用自己的域名，但域名必须备案，额，这个就比较麻烦了，需要点时间）</h4>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/MacOS/" rel="tag"># MacOS</a>
+          
+            <a href="/tags/Hexo/" rel="tag"># Hexo</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/07/hello_world/" rel="next" title="Hello World">
+                <i class="fa fa-chevron-left"></i> Hello World
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/02/14/readnote_ferryman/" rel="prev" title="readnote-Ferryman">
+                readnote-Ferryman <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Lee" />
+            
+              <p class="site-author-name" itemprop="name">Lee</p>
+              <p class="site-description motion-element" itemprop="description">如果没有你,良辰美景更与何人说</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因："><span class="nav-number">1.</span> <span class="nav-text">与很多的搭建blog的人一样，我也是很早就想搭建一个自己的blog，但是由于种种原因一直都没有弄起来，对于我个人来说有以下几个原因：</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#整篇文章会按照以下步骤展开："><span class="nav-number">2.</span> <span class="nav-text">整篇文章会按照以下步骤展开：</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-设备与搭建环境"><span class="nav-number"></span> <span class="nav-text">1. 设备与搭建环境</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-申请github账号并建立一个repository"><span class="nav-number"></span> <span class="nav-text">2. 申请github账号并建立一个repository</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#建立一个repository"><span class="nav-number">1.</span> <span class="nav-text">建立一个repository</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-生成ssh-key与github通信"><span class="nav-number"></span> <span class="nav-text">3. 生成ssh key与github通信</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#检查ssh-key是否存在"><span class="nav-number">1.</span> <span class="nav-text">检查ssh key是否存在</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#创建新ssh-key"><span class="nav-number">2.</span> <span class="nav-text">创建新ssh key</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加key到ssh"><span class="nav-number">3.</span> <span class="nav-text">添加key到ssh</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#添加ssh-key到github"><span class="nav-number">4.</span> <span class="nav-text">添加ssh key到github</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#测试是否可以连接"><span class="nav-number">5.</span> <span class="nav-text">测试是否可以连接</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-安装git"><span class="nav-number"></span> <span class="nav-text">4. 安装git</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-安装node-js"><span class="nav-number"></span> <span class="nav-text">5. 安装node.js</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-安装hexo并进行简单设置"><span class="nav-number"></span> <span class="nav-text">6. 安装hexo并进行简单设置</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#将本地hexo与github-page联系起来"><span class="nav-number">1.</span> <span class="nav-text">将本地hexo与github page联系起来</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7-发布一篇文章"><span class="nav-number"></span> <span class="nav-text">7. 发布一篇文章</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#发布一篇新文章"><span class="nav-number">1.</span> <span class="nav-text">发布一篇新文章</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8-使用一个blog主题"><span class="nav-number"></span> <span class="nav-text">8. 使用一个blog主题</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如何使用yilia主题"><span class="nav-number">1.</span> <span class="nav-text">如何使用yilia主题</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number"></span> <span class="nav-text">总结</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#终于写完了，由于是第一篇，所以花了较多的时间查各种出现的问题以及如何编辑markdown文件，另外还没有找到合适的图床，所以这篇文章没有图片，另外还有没有编辑完成的地方，等我先想想再说。（已经找到图床，用的阿里云的oss服务，本来想替换用自己的域名，但域名必须备案，额，这个就比较麻烦了，需要点时间）"><span class="nav-number">1.</span> <span class="nav-text">终于写完了，由于是第一篇，所以花了较多的时间查各种出现的问题以及如何编辑markdown文件，另外还没有找到合适的图床，所以这篇文章没有图片，另外还有没有编辑完成的地方，等我先想想再说。（已经找到图床，用的阿里云的oss服务，本来想替换用自己的域名，但域名必须备案，额，这个就比较麻烦了，需要点时间）</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lee</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'afee6a2c3b523befb085',
+          clientSecret: '9deebfe8d7f1cf5b7e95bc458d15e8635847d0b5',
+          repo: 'color4joker.github.io',
+          owner: 'color4joker',
+          admin: ['color4joker'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="路由器,sonos,华硕," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="未经本人同意，内容禁止转载！  1. 背景意外获得sonos one音箱一枚，刚好家里缺一个在客厅放音乐的设备，于是非常开心的设置这个音箱，没想到一开始就遇到了一个wifi连接上的大问题 2. 问题描述sonos one的接口极其稀少，连reset都没有，然后就是这个音箱只能通过两种方式连接：  家里的局域网wifi 苹果airplay（只有最新的sonos设备才支持airplay，支持列表请查询">
+<meta name="keywords" content="路由器,sonos,华硕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="sonos one音箱与华硕路由器的连接冲突解决">
+<meta property="og:url" content="http://color4joker.github.io/2020/03/05/sonosone_asusrouter_conflict/index.html">
+<meta property="og:site_name" content="Color4Joker">
+<meta property="og:description" content="未经本人同意，内容禁止转载！  1. 背景意外获得sonos one音箱一枚，刚好家里缺一个在客厅放音乐的设备，于是非常开心的设置这个音箱，没想到一开始就遇到了一个wifi连接上的大问题 2. 问题描述sonos one的接口极其稀少，连reset都没有，然后就是这个音箱只能通过两种方式连接：  家里的局域网wifi 苹果airplay（只有最新的sonos设备才支持airplay，支持列表请查询">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="https://images.color4joker.com/2020%3A03%3A05%3Aasus-router-prob_001.png">
+<meta property="og:image" content="https://images.color4joker.com/2020%3A03%3A05%3Aasus-router-prob_002.png">
+<meta property="og:updated_time" content="2021-11-30T15:42:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="sonos one音箱与华硕路由器的连接冲突解决">
+<meta name="twitter:description" content="未经本人同意，内容禁止转载！  1. 背景意外获得sonos one音箱一枚，刚好家里缺一个在客厅放音乐的设备，于是非常开心的设置这个音箱，没想到一开始就遇到了一个wifi连接上的大问题 2. 问题描述sonos one的接口极其稀少，连reset都没有，然后就是这个音箱只能通过两种方式连接：  家里的局域网wifi 苹果airplay（只有最新的sonos设备才支持airplay，支持列表请查询">
+<meta name="twitter:image" content="https://images.color4joker.com/2020%3A03%3A05%3Aasus-router-prob_001.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://color4joker.github.io/2020/03/05/sonosone_asusrouter_conflict/"/>
+
+
+
+
+
+  <title>sonos one音箱与华硕路由器的连接冲突解决 | Color4Joker</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Color4Joker</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://color4joker.github.io/2020/03/05/sonosone_asusrouter_conflict/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Color4Joker">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">sonos one音箱与华硕路由器的连接冲突解决</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-03-05T10:04:00+08:00">
+                2020-03-05
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <font color="#DC143C" size="4">未经本人同意，内容禁止转载！</font>
+
+<h3 id="1-背景"><a href="#1-背景" class="headerlink" title="1. 背景"></a>1. 背景</h3><p>意外获得sonos one音箱一枚，刚好家里缺一个在客厅放音乐的设备，于是非常开心的设置这个音箱，没想到一开始就遇到了一个wifi连接上的大问题</p>
+<h3 id="2-问题描述"><a href="#2-问题描述" class="headerlink" title="2. 问题描述"></a>2. 问题描述</h3><p>sonos one的接口极其稀少，连reset都没有，然后就是这个音箱只能通过两种方式连接：</p>
+<ol>
+<li>家里的局域网wifi</li>
+<li>苹果airplay（只有最新的sonos设备才支持airplay，支持列表请查询sonos官网）</li>
+</ol>
+<p>airplay经常会找不到，连接的稳定性也极差（至少我的sonos one就是这么个情况），所以就必须要设置wifi连接的方式。但是我家的wifi-华硕ac88u居然无法设置成功，无论怎么弄就是无法让音箱连接到路由器的2.4Hz频段</p>
+<a id="more"></a>
+<h3 id="3-设置过程及问题解决方案"><a href="#3-设置过程及问题解决方案" class="headerlink" title="3. 设置过程及问题解决方案"></a>3. 设置过程及问题解决方案</h3><p>设置sonos one需要下载sonos的app（所有sonos设备都是如此），然后按照app上的指示一步一步操作即可。按照我的理解，这个app工作流程是这样的：</p>
+<ol>
+<li>注册，这个不用说</li>
+<li>通过蓝牙找到附近的sonos设备</li>
+<li>通过蓝牙给sonos设备设置wifi</li>
+<li>通过wifi尝试连接设备</li>
+<li>基本设置完毕，然后是个性化的一些功能（比如添加QQ音乐）</li>
+</ol>
+<p>华硕路由器就是在第4步的时候拉跨了，因为我把路由器的界面打开后发现，第三步是成功了的，路由器连接显示已经找到了sonos one这个设备，但是第4步尝试通过wifi连接设备的时候，sonos one又断开了与路由器的连接（我的sonos one还有一个更致命的问题，就是我直接通过网线连接路由器也不行），于是就造成了sonos的app上就永远的卡在了这一步骤上</p>
+<p><strong>解决方案：华硕ac88u的设置界面</strong></p>
+<ol>
+<li>进入华硕路由器的设置界面</li>
+<li>选择左侧无线网络</li>
+<li>选择专业设置</li>
+<li>选择2.4Hz频段</li>
+<li>停用无线传输公平性</li>
+<li>点击应用此界面的设置</li>
+</ol>
+<p><img src="https://images.color4joker.com/2020%3A03%3A05%3Aasus-router-prob_001.png" alt="设置界面1"><br><img src="https://images.color4joker.com/2020%3A03%3A05%3Aasus-router-prob_002.png" alt="设置界面2"></p>
+<p>然后你再通过sonos的app来设置，比如我设置sonos one就一切顺利了</p>
+<p><strong>sonos one的小技巧 - 重置音箱：</strong></p>
+<ol>
+<li>断电</li>
+<li>按住音箱屁股上的圆圆的按钮，一直按着，然后接通电源（接通电源后我仍然按着按钮的）</li>
+<li>然后sonos one的灯首先会橘色跟白色交替闪烁，然后变成绿色闪烁（看到绿色闪烁的时候我才松开按钮），这样就重置了</li>
+</ol>
+<h3 id="4-什么是无线传输公平性"><a href="#4-什么是无线传输公平性" class="headerlink" title="4. 什么是无线传输公平性"></a>4. 什么是无线传输公平性</h3><blockquote>
+<p>目前使用的 2.4G频段 WiFi，遵守 802.11n 标准，他允许客户端同时使用多个天线同时收发信号，以使带宽翻倍。不过虽然 802.11n能够最高支持到 600Mbps带宽，但同一时间接入点只能与一个客户端通信。这就意味着，当多个客户端接入同一个无线路由器时，他们需要依次排队获得服务。当大家的接入速度相当时，并不会产生什么问题。但在实际情况下，客户端与接入点之间建立的无线连接会收到各种干扰的影响。当整个无线局域网内出现了慢速接入设备时，问题就发生了。<br>Airtime Fairness (发送时间公平性)技术通过转移部分慢速设备的服务时间给快速设备，来提高整个无线局域网的传输速度，优化等待时间，提高可用性，但会使得慢速设备变得更慢.<br>比如A与B同时接入一个无线接入点，A的连接速度是 1Mbps，B的连接速度是 5Mbps。当A需要传输 10M 数据时，B 不得不等待10秒才能够开始传输。在 AirtimeFairness 开启后，所有的客户端能够获得相等的服务时间。在本例中，A的前5秒内能够传输 5Mbps ，而后5秒将被分配给B，能够传输最高 25Mbps数据。所以在开启 AirtimeFairness 之后，整个无线局域网的传输性能获得了大幅提升，高性能设备获得了更高的连接速度。<br>当你的路由器同时连接大量无线客户端时，开启 AirtimeFairness 能够更好的在设备之间分配带宽，避免浪费以及慢速设备拖慢整个网络。另外，如果你的部分设备（例如手机）时常远离路由器并且信号欠佳时，也应该启用 AirtimeFairness 以保证其他设备的网络质量。</p>
+</blockquote>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/路由器/" rel="tag"># 路由器</a>
+          
+            <a href="/tags/sonos/" rel="tag"># sonos</a>
+          
+            <a href="/tags/华硕/" rel="tag"># 华硕</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/02/14/readnote_ferryman/" rel="next" title="readnote-Ferryman">
+                <i class="fa fa-chevron-left"></i> readnote-Ferryman
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+    <div id="gitalk-container"></div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.jpg"
+                alt="Lee" />
+            
+              <p class="site-author-name" itemprop="name">Lee</p>
+              <p class="site-description motion-element" itemprop="description">如果没有你,良辰美景更与何人说</p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">categories</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">tags</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-背景"><span class="nav-number">1.</span> <span class="nav-text">1. 背景</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-问题描述"><span class="nav-number">2.</span> <span class="nav-text">2. 问题描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-设置过程及问题解决方案"><span class="nav-number">3.</span> <span class="nav-text">3. 设置过程及问题解决方案</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-什么是无线传输公平性"><span class="nav-number">4.</span> <span class="nav-text">4. 什么是无线传输公平性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; 2017 &mdash; <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Lee</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Gemini</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/canvas-nest/canvas-nest.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.1.4"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+  <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+   <script type="text/javascript">
+        var gitalk = new Gitalk({
+          clientID: 'afee6a2c3b523befb085',
+          clientSecret: '9deebfe8d7f1cf5b7e95bc458d15e8635847d0b5',
+          repo: 'color4joker.github.io',
+          owner: 'color4joker',
+          admin: ['color4joker'],
+          id: location.pathname,
+          distractionFreeMode: 'true'
+        })
+        gitalk.render('gitalk-container')           
+       </script>
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
